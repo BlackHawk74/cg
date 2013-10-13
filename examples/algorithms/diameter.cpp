@@ -42,7 +42,7 @@ struct diameter_viewer : cg::visualization::viewer_adapter
       p.corner_stream() << "Set diameter." << cg::visualization::endl
                         << "Double click to clear, right-click to add point." << cg::visualization::endl;
       if (diameter)
-         p.corner_stream() << "Value: " << cg::length(*diameter) << cg::visualization::endl;
+         p.corner_stream() << "Value: " << (size_t)cg::length(*diameter) << cg::visualization::endl;
    }
 
    bool on_press(const point_2f & p)

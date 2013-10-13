@@ -69,6 +69,11 @@ namespace cg
          return pts_[idx];
       }
 
+      void reverse()
+      {
+         std::reverse(pts_.begin(), pts_.end());
+      }
+
    private:
       friend struct contour_builder_type;
 

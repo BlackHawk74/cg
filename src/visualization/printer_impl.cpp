@@ -25,6 +25,7 @@ namespace visualization
       PRINT(size_t)
       PRINT(point_2f const &)
       PRINT(segment_2f const &)
+      PRINT(int)
 #undef PRINT
       stream_type & operator << (manipulator_type f)
       {

@@ -23,6 +23,7 @@ namespace visualization
       PRINT(point_2f const &)
       PRINT(segment_2f const &)
       PRINT(manipulator_type)
+      PRINT(int)
 #undef PRINT
 
       virtual void end_line() = 0;
