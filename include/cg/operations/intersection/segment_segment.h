@@ -16,7 +16,7 @@ namespace cg
 
    namespace detail
    {
-      bool same_hotpixel ( double a, double b, double bound )
+      inline bool same_hotpixel ( double a, double b, double bound )
       {
          double ar = a / bound, br = b / bound;
 
@@ -42,7 +42,7 @@ namespace cg
          return {x, y};
       }
 
-      boost::optional<point_2> intersection_d ( segment_2 const & a, segment_2 const & b, int eps_pwr )
+      inline boost::optional<point_2> intersection_d ( segment_2 const & a, segment_2 const & b, int eps_pwr )
       {
          typedef double Scalar;
 
@@ -86,7 +86,7 @@ namespace cg
          return boost::none;
       }
 
-      boost::optional<point_2> intersection_i ( segment_2 const & a, segment_2 const & b, int eps_pwr )
+      inline boost::optional<point_2> intersection_i ( segment_2 const & a, segment_2 const & b, int eps_pwr )
       {
          typedef boost::numeric::interval_lib::unprotect<boost::numeric::interval<double> >::type interval;
 
@@ -109,7 +109,7 @@ namespace cg
          return boost::none;
       }
 
-      point_2 intersection_r ( segment_2 const& a, segment_2 const& b )
+      inline point_2 intersection_r ( segment_2 const& a, segment_2 const& b )
       {
          segment_2t<mpq_class> a_r {{a[0].x, a[0].y}, {a[1].x, a[1].y}};
          segment_2t<mpq_class> b_r {{b[0].x, b[0].y}, {b[1].x, b[1].y}};

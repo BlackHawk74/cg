@@ -22,6 +22,8 @@ set(SOURCES
    convex.cpp
    simplify.cpp
    diameter.cpp
+   find_max.cpp
+   rasterize.cpp
 )
 
 add_executable(cg-test ${SOURCES})
